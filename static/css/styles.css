@@ -118,7 +118,15 @@ a:hover { /* Hover style: transition to orange. Cool! */
     -webkit-transition:color .2s ease-in-out;
     -moz-transition:color .2s ease-in-out;
     transition:color .2s ease-in-out;
-    color: orange;
+    color: #6CC073;
+}
+
+.siteheader a:hover { /* different in header */
+    -o-transition:color .2s ease-in-out;
+    -webkit-transition:color .2s ease-in-out;
+    -moz-transition:color .2s ease-in-out;
+    transition:color .2s ease-in-out;
+    color: white;
 }
 
 /* Generic to all content. */
