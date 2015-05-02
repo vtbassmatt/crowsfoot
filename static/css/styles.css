@@ -69,6 +69,14 @@ body {
     margin-right: 10px;
 }
 
+.menu li.active:before {
+    content: "\2192";
+}
+
+.menu li.active:after {
+    content: "\2190";
+}
+
 /* Article list on index page. */
 
 .posttitle {
