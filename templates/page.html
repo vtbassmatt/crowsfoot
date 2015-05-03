@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block head %}
+{{ super() }}
+      <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+      <meta property="og:type" content="website" />
+{% endblock %}
+
 {% block content %}
 <div class="content">
   <div class="article">
