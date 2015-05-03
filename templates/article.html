@@ -18,14 +18,18 @@
 <section class="content">
 
   <h3 class="posttitle">
-    <a class="nodec" href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+    <a class="nodec" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
       {{ article.title }}
     </a>
   </h3>
 
   <div class="postinfo">
     <p class="published" title="{{ article.date.isoformat() }}">
-      {{ article.locale_date }}
+      {{ article.locale_date }}{% if article.tags %} | Tags:
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+      {% endfor %}
+      {% endif %}
     </p>
 
     {% if article.author and SHOW_ARTICLE_AUTHOR %}
