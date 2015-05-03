@@ -16,13 +16,6 @@
       {% if FEED_RSS %}
         <link href="/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
       {% endif %}
-      {% if article and article.title %}
-      <meta property="og:title" content="{{ article.title }}" />
-      {% elif page and page.title %}
-      <meta property="og:title" content="{{ page.title }} | {{ SITENAME }}" />
-      {% else %}
-      <meta property="og:title" content="{{ SITENAME }}" />
-      {% endif %}
       <meta property="og:site_name" content="{{ SITENAME }}" />
       {# <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> #}
     {% endblock head %}
