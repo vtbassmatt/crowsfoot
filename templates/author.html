@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+      <meta property="og:title" content="{{ author }} | {{ SITENAME }}" />
+      <meta property="og:url" content="{{ SITEURL }}/{{ articles_page.url }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:author" content="{{ author }}" />
+{% endblock %}
+
+{% block content %}
+
+<section class="content">
+
+  <h3 class="posttitle">
+    <a class="nodec" href="/{{ articles_page.url }}" rel="bookmark" title="Permalink to posts by {{ author }}">
+      Posts by {{ author }}
+    </a>
+  </h3>
+
+  <ol id="postlist">
+
+    {% for article in articles_page.object_list %}
+    <li class="post">
+        <header class="posttitle">
+          <h3><a href="{{ SITEURL }}/{{ article.url }}"
+                  rel="bookmark"
+                  class="nodec"
+                  title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+          </h3>
+        </header>
+
+        <div class="postinfo">
+          <p class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </p>
+        </div>
+
+        <div class="postsummary"> {{ article.summary }} </div>
+    </li>
+    {% endfor %}
+
+  </ol><!-- /#post-list -->
+
+  {% include 'pagination.html' %}
+
+</section><!-- /#content -->
+
+{% endblock content %}
