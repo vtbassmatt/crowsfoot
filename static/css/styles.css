@@ -179,7 +179,7 @@ sub {
 /* Paragraphs. */
 
 .article p {
-    line-height: 1.3em;
+    line-height: 1.6;
     margin-bottom: 1.5em;
 }
 
@@ -259,4 +259,5 @@ footer {
     font-size: .7em;
     height: 30px;
     position: absolute;
+    line-height: 1.5;
 }
