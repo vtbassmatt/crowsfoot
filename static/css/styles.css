@@ -18,7 +18,7 @@ html { /* This stuff is for the sticky footer. */
 
 body {
     font-family:'Open Sans';
-    margin: 20px auto 100px auto; /* For sticky footer. */
+    margin: 20px auto 60px auto; /* For sticky footer. */
 }
 
 /* Site header. */
@@ -198,6 +198,12 @@ sub {
 .article h3 {
     padding-bottom: 0.8em;
     font-size: 1em;
+}
+
+.enjoyedit {
+	font-size: 80%;
+	line-height: 1.2;
+	padding-bottom: 0;
 }
 
 /* Footnotes. */
