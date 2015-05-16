@@ -39,6 +39,12 @@
     {% endif  %}
   </div><!-- .postinfo -->
 
+  {% if article.summary %}
+  <div class="summary">
+    {{ article.summary }}
+  </div>
+  {% endif %}
+
   <div class="article">
     {{ article.content }}
   </div><!-- .content -->

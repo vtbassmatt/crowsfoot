@@ -164,6 +164,10 @@ sub {
 
 /* Article */
 
+.summary {
+	font-style: italic;
+}
+
 .article {
     margin-top: 30px;
 }
